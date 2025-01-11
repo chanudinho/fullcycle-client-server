@@ -50,7 +50,7 @@ func getCotacaoHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getCotacao() (Cotacao, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Millisecond)
+	ctx, cancel := context.WithTimeout(context.Background(), 200*time.Millisecond)
 	defer cancel()
 
 	url := "https://economia.awesomeapi.com.br/json/USD-BRL"
